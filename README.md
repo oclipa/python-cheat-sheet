@@ -15,7 +15,7 @@
 
 **MacOS**
 
-1. Install [homebrew](https://brew.sh/): `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"` 
+1. Install [Homebrew](https://brew.sh/): `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"` 
 1. If necessary, remove previous installs of python:
    * **Do not uninstall the system version of python: /usr/bin/python\* **
    * Check for installed versions: `where python python2 python3`
@@ -34,7 +34,7 @@
 <button type="button" class="collapsible">+ Uninstallation</button>
 <div class="content" style="display: none;" markdown="1">
 
-**Do not uninstall the system version of python: /usr/bin/python\* **
+**Do not uninstall the system version of python, found in /usr/bin/ or /System/**
 
 **Using pyenv**
 
@@ -46,9 +46,9 @@ If python has been installed using pyenv:
       * This should be a location in `~/.pyenv`.
    * Delete the directory: `rm -rf <directory path>`
 
-**Using homebrew***
+**Using Homebrew**
 
-If python was install using homebrew:
+If python was install using Homebrew:
    * Check if a version is installed: `brew list | grep python`
    * Check the install location using: `brew info python`
    * Uninstall using: `brew uninstall --ignore-dependencies python``
@@ -77,7 +77,7 @@ If you have problems, run `brew doctor` and see if any of the suggestions help.
       * /opt/local/node 
       * /opt/local/share/doc/node 
 
-**Manually***
+**Manually**
 
 If an independently installed version of python is present, delete the following files and directories (see [here](https://apple.stackexchange.com/questions/284824/remove-and-reinstall-python-on-mac-can-i-trust-these-old-references)):
 
