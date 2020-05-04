@@ -88,3 +88,39 @@ If an independently installed version of python is present, delete the following
 
 </div>
 </div>
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+-------------------------------------------------------------------------------------------------------
+
+**Move along; nothing to see here...**
+
+<script type="text/javascript">
+
+    const loadCSS = (filename) => { 
+
+       const file = document.createElement("link");
+       file.setAttribute("rel", "stylesheet");
+       file.setAttribute("type", "text/css");
+       file.setAttribute("href", filename);
+       document.head.appendChild(file);
+    };
+
+    const loadJS = (filename) => { 
+
+       const file = document.createElement("script");
+       file.setAttribute("type", "text/javascript");
+       file.setAttribute("src", filename);
+       document.head.appendChild(file);
+    };
+   
+    //just call a function to load your CSS
+    //this path should be relative your HTML location
+    loadCSS("../collapse.css");
+    loadJS("../collapse.js");
+
+</script>
