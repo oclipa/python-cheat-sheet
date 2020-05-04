@@ -17,7 +17,7 @@
 
 1. Install [Homebrew](https://brew.sh/): `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"` 
 1. If necessary, remove previous installs of python:
-   * **Do not uninstall the system version of python: /usr/bin/python\* **
+   * **Do not uninstall the system version of python, found in /usr/bin**
    * Check for installed versions: `where python python2 python3`
 1. Install pyenv: `brew install pyenv`
    * You may also need to run: `brew install openssl readline sqlite3 xz zlib`
@@ -40,11 +40,11 @@
 
 If python has been installed using pyenv:
 
-* pyenv uninstall <version>
+* pyenv uninstall [version]
 * or, more manually, 
    * Identify the location of the version to be deleted: `pyenv prefix 3.8.2`
       * This should be a location in `~/.pyenv`.
-   * Delete the directory: `rm -rf <directory path>`
+   * Delete the directory: `rm -rf [directory path]`
 
 **Using Homebrew**
 
