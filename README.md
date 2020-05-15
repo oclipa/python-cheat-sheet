@@ -12,6 +12,7 @@
 <div id="install">
 <button type="button" class="collapsible">+ Installation</button>
 <div class="content" style="display: none;" markdown="1">
+1. Run the following: `echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc` (or `~/.bashrc`)
 
 **MacOS**
 
@@ -21,12 +22,51 @@
    * Check for installed versions: `where python python2 python3`
 1. Install pyenv: `brew install pyenv`
    * You may also need to run: `brew install openssl readline sqlite3 xz zlib`
+1. Verify the installation by running: 
+   * `pyenv update`
+1. Run the following to ensure pyenv gets initialized: 
+   * `echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc` (or `~/.bashrc`)
+</div>
+</div>
+
+**Ubuntu**
+
+1. Install pre-requisites:
+   * `sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl git`
+1. Install pyenv:
+   * `curl https://pyenv.run | bash`
+1. Reopen the prompt (or run `exec $SHELL`)
+   * If there are errors related to config files, check their permissions (they should be 644).
+1. Verify the installation by running: 
+   * `pyenv update`
+1. Run the following to ensure pyenv gets initialized: 
+   * `echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc` (or `~/.bashrc`)
+
+**Setting a Global Python Version**
+
+*It is usually cleaner to create a virtual environment (see below), rather than using a base installation*
+
 1. Install your chosen version of python:
    * List available versions (in this case, list all from 3.6-3.8): `pyenv install --list | grep " 3\.[678]"`
    * Install the chosen version: `pyenv install 3.8.2` (latest at time of writing)
 1. Set this version of python as the global default: `pyenv global 3.8.2`
-1. Verify: `pyenv version`
-1. Give pyenv power over your shell's PATH: `echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc`
+1. Verify active version: `pyenv version`
+
+**Creating a Python Virtual Environment**
+
+*A virtual environment allows an app to be configured without affecting the base installation*
+
+1. Create the virtual environment for your chosen (installed) version:
+   * `pyenv virtualenv 3.8.3 [identifier-for-venv]`
+1. To set the venv as the global default:
+   * `pyenv global [identifier-for-venv]`
+1. To set the venv as the local default (which overrides the global default):
+   * `pyenv local [identifier-for-venv]`
+1. To unset the venv and revert to the gloabl default:
+   * `pyenv local --unset`
+1. It is also possible to chain versions, so that if venv1 is missing, venv2 will be used:
+   * `pyenv [global|local] [identifier-for-venv1] [identifier-for-venv2]`
+
 </div>
 </div>
 
@@ -35,6 +75,15 @@
 <div class="content" style="display: none;" markdown="1">
 
 **Do not uninstall the system version of python, found in /usr/bin/ or /System/**
+1. Add the following to .bashrc or .zshrc:
+
+```
+export PATH="/home/dev/.pyenv/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+fi
+```
 
 **Using pyenv**
 
@@ -85,6 +134,17 @@ If an independently installed version of python is present, delete the following
 * /usr/local/bin/pip*
 * /Library/Frameworks/Python.framework
   * NOTE: do not delete **/System**/Library/Frameworks/Python.framework!
+
+</div>
+</div>
+
+<div id="furtherinfo">
+<button type="button" class="collapsible">+ Further Information</button>
+<div class="content" style="display: none;" markdown="1">
+
+* [https://github.com/pyenv/pyenv-installer/blob/master/README.rst](https://github.com/pyenv/pyenv-installer/blob/master/README.rst)
+* [https://github.com/pyenv/pyenv/blob/master/COMMANDS.md](https://github.com/pyenv/pyenv/blob/master/COMMANDS.md)
+* https://github.com/pyenv/pyenv-virtualenv/blob/master/README.md](https://github.com/pyenv/pyenv-virtualenv/blob/master/README.md)
 
 </div>
 </div>
