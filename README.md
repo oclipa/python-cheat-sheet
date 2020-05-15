@@ -12,7 +12,6 @@
 <div id="install">
 <button type="button" class="collapsible">+ Installation</button>
 <div class="content" style="display: none;" markdown="1">
-1. Run the following: `echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc` (or `~/.bashrc`)
 
 **MacOS**
 
