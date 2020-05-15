@@ -25,8 +25,6 @@
    * `pyenv update`
 1. Run the following to ensure pyenv gets initialized: 
    * `echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc` (or `~/.bashrc`)
-</div>
-</div>
 
 **Ubuntu**
 
@@ -65,7 +63,6 @@
    * `pyenv local --unset`
 1. It is also possible to chain versions, so that if venv1 is missing, venv2 will be used:
    * `pyenv [global|local] [identifier-for-venv1] [identifier-for-venv2]`
-
 </div>
 </div>
 
