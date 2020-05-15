@@ -140,7 +140,7 @@ If an independently installed version of python is present, delete the following
 
 * [https://github.com/pyenv/pyenv-installer/blob/master/README.rst](https://github.com/pyenv/pyenv-installer/blob/master/README.rst)
 * [https://github.com/pyenv/pyenv/blob/master/COMMANDS.md](https://github.com/pyenv/pyenv/blob/master/COMMANDS.md)
-* https://github.com/pyenv/pyenv-virtualenv/blob/master/README.md](https://github.com/pyenv/pyenv-virtualenv/blob/master/README.md)
+* [https://github.com/pyenv/pyenv-virtualenv/blob/master/README.md](https://github.com/pyenv/pyenv-virtualenv/blob/master/README.md)
 
 </div>
 </div>
