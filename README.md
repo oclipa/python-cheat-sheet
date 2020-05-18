@@ -39,16 +39,11 @@
 1. Run the following to ensure pyenv gets initialized: 
    * `echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc` (or `~/.bashrc`)
 
-**Setting a Global Python Version**
+**Installing Python**
 
-*It is usually cleaner to create a virtual environment (see below), rather than using a base installation*
-
-1. Install your chosen version of python:
-   * List available versions (in this case, list all from 3.6-3.8): `pyenv install --list | grep " 3\.[678]"`
-   * Install the chosen version: `pyenv install 3.8.2` (latest at time of writing)
-1. Set this version of python as the global default: `pyenv global 3.8.2`
-1. Verify active version: `pyenv version`
-
+1. List available versions (in this case, list all from 3.6-3.8): `pyenv install --list | grep " 3\.[678]"`
+1. Install the chosen version: `pyenv install 3.8.2` (latest at time of writing)
+   
 **Creating a Python Virtual Environment**
 
 *A virtual environment allows an app to be configured without affecting the base installation*
@@ -63,6 +58,8 @@
    * `pyenv local --unset`
 1. It is also possible to chain versions, so that if venv1 is missing, venv2 will be used:
    * `pyenv [global|local] [identifier-for-venv1] [identifier-for-venv2]`
+1. To verify the active version: `pyenv version`
+
 </div>
 </div>
 
